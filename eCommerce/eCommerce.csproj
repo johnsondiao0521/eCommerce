@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationLayer\Customers\CreditCardDto.cs" />
+    <Compile Include="ApplicationLayer\Map.cs" />
     <Compile Include="DomainModelLayer\Customers\CustomerAlreadyRegisteredSpec.cs" />
     <Compile Include="ApplicationLayer\Customers\CustomerDto.cs" />
     <Compile Include="ApplicationLayer\Customers\CustomerPurchaseHistoryDto.cs" />

@@ -51,7 +51,7 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
-        [HttpGet]
+        //[HttpGet]
         public Response<CustomerDto> GetById(Guid id)
         {
             Response<CustomerDto> response = new Response<CustomerDto>();
@@ -68,7 +68,7 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
-        [HttpGet]
+        //[HttpGet]
         public Response RemoveById(Guid id)
         {
             Response response = new Response();
@@ -85,7 +85,7 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
-        [HttpGet]
+        //[HttpGet]
         public Response Update([FromUri]CustomerDto customer)
         {
             Response response = new Response();

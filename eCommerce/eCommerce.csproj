@@ -58,6 +58,9 @@
   <ItemGroup>
     <Compile Include="ApplicationLayer\Customers\CreditCardDto.cs" />
     <Compile Include="ApplicationLayer\Map.cs" />
+    <Compile Include="ApplicationLayer\Products\IProductService.cs" />
+    <Compile Include="ApplicationLayer\Products\ProductDto.cs" />
+    <Compile Include="ApplicationLayer\Products\ProductService.cs" />
     <Compile Include="DomainModelLayer\Customers\CustomerAlreadyRegisteredSpec.cs" />
     <Compile Include="ApplicationLayer\Customers\CustomerDto.cs" />
     <Compile Include="ApplicationLayer\Customers\CustomerPurchaseHistoryDto.cs" />
@@ -72,6 +75,14 @@
     <Compile Include="DomainModelLayer\Customers\CustomerCreated.cs" />
     <Compile Include="DomainModelLayer\Customers\CustomerRegisteredSpec.cs" />
     <Compile Include="DomainModelLayer\Customers\ICustomerRepository.cs" />
+    <Compile Include="DomainModelLayer\Products\Product.cs" />
+    <Compile Include="DomainModelLayer\Products\ProductCode.cs" />
+    <Compile Include="DomainModelLayer\Products\ProductCodeCreated.cs" />
+    <Compile Include="DomainModelLayer\Products\ProductCreated.cs" />
+    <Compile Include="DomainModelLayer\Products\ProductIsInStockSpec.cs" />
+    <Compile Include="DomainModelLayer\Products\ProductReturnReasonSpec.cs" />
+    <Compile Include="DomainModelLayer\Products\Return.cs" />
+    <Compile Include="DomainModelLayer\Products\ReturnReason.cs" />
     <Compile Include="Helpers\Domain\DomainEvent.cs" />
     <Compile Include="Helpers\Domain\DomainEventHandle.cs" />
     <Compile Include="Helpers\Domain\DomainEventRecord.cs" />
@@ -87,7 +98,10 @@
     <Compile Include="InfrastructureLayer\MemDomainEventRepository.cs" />
     <Compile Include="InfrastructureLayer\MemoryRepository.cs" />
     <Compile Include="InfrastructureLayer\MemoryUnitOfWork.cs" />
+    <Compile Include="InfrastructureLayer\StubDataCountryRepository.cs" />
     <Compile Include="InfrastructureLayer\StubDataCustomerRepository.cs" />
+    <Compile Include="InfrastructureLayer\StubDataProductCodeRepository.cs" />
+    <Compile Include="InfrastructureLayer\StubDataProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

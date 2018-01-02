@@ -5,7 +5,9 @@ using System.Web;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using eCommerce.DomainModelLayer.Countries;
 using eCommerce.DomainModelLayer.Customers;
+using eCommerce.DomainModelLayer.Products;
 using eCommerce.Helpers.Repository;
 using eCommerce.InfrastructureLayer;
 
@@ -22,10 +24,10 @@ namespace eCommerce.WebService
             container.Register(Component.For(typeof(IRepository<>), typeof(MemoryRepository<>)).ImplementedBy(typeof(MemoryRepository<>)).LifestyleSingleton());
             container.Register(Component.For<IUnitOfWork>().ImplementedBy<MemoryUnitOfWork>().LifestyleSingleton());
 
-            //container.Register(Component.For<IRepository<ProductCode>>().ImplementedBy<StubDataProductCodeRepository>().LifestyleSingleton());
-            //container.Register(Component.For<IRepository<Country>>().ImplementedBy<StubDataCountryRepository>().LifestyleSingleton());
+            container.Register(Component.For<IRepository<ProductCode>>().ImplementedBy<StubDataProductCodeRepository>().LifestyleSingleton());
+            container.Register(Component.For<IRepository<Country>>().ImplementedBy<StubDataCountryRepository>().LifestyleSingleton());
             //container.Register(Component.For<IRepository<CountryTax>>().ImplementedBy<StubDataCountryTaxRepository>().LifestyleSingleton());
-            //container.Register(Component.For<IRepository<Product>>().ImplementedBy<StubDataProductRepository>().LifestyleSingleton());
+            container.Register(Component.For<IRepository<Product>>().ImplementedBy<StubDataProductRepository>().LifestyleSingleton());
             container.Register(Component.For<ICustomerRepository>().ImplementedBy<StubDataCustomerRepository>().LifestyleSingleton());
             container.Register(Component.For<IDomainEventRepository>().ImplementedBy<MemDomainEventRepository>().LifestyleSingleton());
         }

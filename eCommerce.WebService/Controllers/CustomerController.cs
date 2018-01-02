@@ -10,7 +10,11 @@ using eCommerce.WebService.Models;
 namespace eCommerce.WebService.Controllers
 {
     /*
-     * http://localhost:63223/api/customer/add?FirstName=john2&LastName=smith2&Email=john2.smith2@microsoft.com
+      http://localhost:63223/api/customer/add?FirstName=john2&LastName=smith2&Email=john2.smith2@microsoft.com&countryid=229074bd-2356-4b5a-8619-cdebba71cc21
+       http://localhost:63223/api/customer/Getbyid/5D5020DA-47DF-4C82-A722-C8DEAF06AE23
+      http://localhost:63223/api/customer/IsEmailAvailable?email=smith.john@microsoft.com
+      http://localhost:63223/api/customer/RemoveById/5D5020DA-47DF-4C82-A722-C8DEAF06AE23
+      http://localhost:63223/api/customer/update?id=5D5020DA-47DF-4C82-A722-C8DEAF06AE23&Email=smith.john@microsoft.com
          */
     public class CustomerController : ApiController
     {
@@ -36,6 +40,7 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
+        [HttpGet]
         public Response<bool> IsEmailAvailable(string email)
         {
             Response<bool> response = new Response<bool>();
@@ -51,7 +56,7 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
-        //[HttpGet]
+        [HttpGet]
         public Response<CustomerDto> GetById(Guid id)
         {
             Response<CustomerDto> response = new Response<CustomerDto>();
@@ -68,7 +73,7 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
-        //[HttpGet]
+        [HttpGet]
         public Response RemoveById(Guid id)
         {
             Response response = new Response();
@@ -85,7 +90,7 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
-        //[HttpGet]
+        [HttpGet]
         public Response Update([FromUri]CustomerDto customer)
         {
             Response response = new Response();

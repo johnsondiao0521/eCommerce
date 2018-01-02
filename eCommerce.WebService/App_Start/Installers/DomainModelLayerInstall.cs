@@ -4,6 +4,7 @@ using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using eCommerce.DomainModelLayer.Countries;
 using eCommerce.DomainModelLayer.Customers;
+using eCommerce.DomainModelLayer.Products;
 using eCommerce.Helpers.Domain;
 
 namespace eCommerce.WebService
@@ -35,8 +36,8 @@ namespace eCommerce.WebService
             container.Register(Component.For<Handles<CustomerChangedEmail>>().ImplementedBy<DomainEventHandle<CustomerChangedEmail>>().LifestyleSingleton());
             //container.Register(Component.For<Handles<CustomerCheckedOut>>().ImplementedBy<DomainEventHandle<CustomerCheckedOut>>().LifestyleSingleton());
             container.Register(Component.For<Handles<CustomerCreated>>().ImplementedBy<DomainEventHandle<CustomerCreated>>().LifestyleSingleton());
-            //container.Register(Component.For<Handles<ProductCodeCreated>>().ImplementedBy<DomainEventHandle<ProductCodeCreated>>().LifestyleSingleton());
-            //container.Register(Component.For<Handles<ProductCreated>>().ImplementedBy<DomainEventHandle<ProductCreated>>().LifestyleSingleton());
+            container.Register(Component.For<Handles<ProductCodeCreated>>().ImplementedBy<DomainEventHandle<ProductCodeCreated>>().LifestyleSingleton());
+            container.Register(Component.For<Handles<ProductCreated>>().ImplementedBy<DomainEventHandle<ProductCreated>>().LifestyleSingleton());
             //container.Register(Component.For<Handles<CountryTaxCreated>>().ImplementedBy<DomainEventHandle<CountryTaxCreated>>().LifestyleSingleton());
 
             DomainEvents.Init(container);

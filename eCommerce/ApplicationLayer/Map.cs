@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eCommerce.ApplicationLayer.Customers;
 using eCommerce.DomainModelLayer.Customers;
+using eCommerce.DomainModelLayer.Products;
 
 namespace eCommerce.ApplicationLayer
 {
@@ -10,6 +11,7 @@ namespace eCommerce.ApplicationLayer
         {
             Mapper.CreateMap<CreditCard, CreditCardDto>();
             Mapper.CreateMap<Customer, CustomerDto>();
+            Mapper.CreateMap<Product, ProductDto>();
         }
     }
 }

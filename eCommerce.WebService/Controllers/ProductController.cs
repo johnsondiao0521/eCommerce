@@ -10,6 +10,10 @@ namespace eCommerce.WebService.Controllers
      http://localhost:63223/api/product/add?name=iPhone5&quantity=6&cost=422&productcodeid=B2773EBF-CD0C-4F31-83E2-691973E32531
      http://localhost:63223/api/product/get/65D03D7E-E41A-49BC-8680-DC942BABD10A
      */
+
+        /// <summary>
+        /// 产品服务接口
+        /// </summary>
     public class ProductController : ApiController
     {
         readonly IProductService productService;
@@ -18,6 +22,11 @@ namespace eCommerce.WebService.Controllers
             this.productService = productService;
         }
 
+        /// <summary>
+        /// 新增产品
+        /// </summary>
+        /// <param name="productDto"></param>
+        /// <returns></returns>
         [HttpGet]
         public Response<ProductDto> Add([FromUri]ProductDto productDto)
         {

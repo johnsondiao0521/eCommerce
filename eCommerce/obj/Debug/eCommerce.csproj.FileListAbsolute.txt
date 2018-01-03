@@ -19,7 +19,6 @@ D:\01OpenSourceProject\eCommerce\eCommerce\bin\Debug\Castle.Windsor.dll
 D:\01OpenSourceProject\eCommerce\eCommerce\bin\Debug\AutoMapper.xml
 D:\01OpenSourceProject\eCommerce\eCommerce\bin\Debug\Castle.Core.xml
 D:\01OpenSourceProject\eCommerce\eCommerce\bin\Debug\Castle.Windsor.xml
-D:\01OpenSourceProject\eCommerce\eCommerce\obj\Debug\eCommerce.csprojResolveAssemblyReference.cache
 D:\01OpenSourceProject\eCommerce\eCommerce\obj\Debug\eCommerce.dll
 D:\01OpenSourceProject\eCommerce\eCommerce\obj\Debug\eCommerce.pdb
 D:\MyProjects\eCommerce\eCommerce\bin\Debug\AutoMapper.Net4.dll
@@ -34,3 +33,4 @@ D:\MyProjects\eCommerce\eCommerce\bin\Debug\Castle.Windsor.xml
 D:\MyProjects\eCommerce\eCommerce\obj\Debug\eCommerce.csprojResolveAssemblyReference.cache
 D:\MyProjects\eCommerce\eCommerce\obj\Debug\eCommerce.dll
 D:\MyProjects\eCommerce\eCommerce\obj\Debug\eCommerce.pdb
+D:\01OpenSourceProject\eCommerce\eCommerce\obj\Debug\eCommerce.csprojResolveAssemblyReference.cache

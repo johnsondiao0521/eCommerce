@@ -56,13 +56,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationLayer\Carts\CartDto.cs" />
+    <Compile Include="ApplicationLayer\Carts\CartProductDto.cs" />
+    <Compile Include="ApplicationLayer\Carts\CartService.cs" />
+    <Compile Include="ApplicationLayer\Carts\CheckOutResultDto.cs" />
+    <Compile Include="ApplicationLayer\Carts\ICartService.cs" />
     <Compile Include="ApplicationLayer\Customers\CreditCardDto.cs" />
     <Compile Include="ApplicationLayer\Map.cs" />
     <Compile Include="ApplicationLayer\Products\IProductService.cs" />
     <Compile Include="ApplicationLayer\Products\ProductDto.cs" />
     <Compile Include="ApplicationLayer\Products\ProductService.cs" />
     <Compile Include="DomainModelLayer\Carts\Cart.cs" />
+    <Compile Include="DomainModelLayer\Carts\CartCreated.cs" />
     <Compile Include="DomainModelLayer\Carts\CartProduct.cs" />
+    <Compile Include="DomainModelLayer\Carts\CheckOutIssue.cs" />
+    <Compile Include="DomainModelLayer\Carts\CustomerCartSpec.cs" />
+    <Compile Include="DomainModelLayer\Carts\ProductAddedCart.cs" />
+    <Compile Include="DomainModelLayer\Carts\ProductInCartSpec.cs" />
+    <Compile Include="DomainModelLayer\Carts\ProductRemovedCart.cs" />
+    <Compile Include="DomainModelLayer\Customers\CreditCardAvailableSpec.cs" />
     <Compile Include="DomainModelLayer\Customers\CustomerAlreadyRegisteredSpec.cs" />
     <Compile Include="ApplicationLayer\Customers\CustomerDto.cs" />
     <Compile Include="ApplicationLayer\Customers\CustomerPurchaseHistoryDto.cs" />
@@ -74,6 +86,7 @@
     <Compile Include="DomainModelLayer\Customers\CreditCardAdded.cs" />
     <Compile Include="DomainModelLayer\Customers\Customer.cs" />
     <Compile Include="DomainModelLayer\Customers\CustomerChangedEmail.cs" />
+    <Compile Include="DomainModelLayer\Customers\CustomerCheckedOut.cs" />
     <Compile Include="DomainModelLayer\Customers\CustomerCreated.cs" />
     <Compile Include="DomainModelLayer\Customers\CustomerRegisteredSpec.cs" />
     <Compile Include="DomainModelLayer\Customers\ICustomerRepository.cs" />

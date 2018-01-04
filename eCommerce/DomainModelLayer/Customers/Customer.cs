@@ -68,9 +68,9 @@ namespace eCommerce.DomainModelLayer.Customers
             DomainEvents.Raise(new CreditCardAdded() { CreditCard = creditCard });
         }
 
-        //public virtual ReadOnlyCollection<CreditCard> GetCreditCardsAvailble()
-        //{
-        //    return this.creditCards.FindAll(new CreditCardAvailableSpec(DateTime.Today).IsSatisfiedBy).AsReadOnly();
-        //}
+        public virtual ReadOnlyCollection<CreditCard> GetCreditCardsAvailble()
+        {
+            return this.creditCards.FindAll(new CreditCardAvailableSpec(DateTime.Today).IsSatisfiedBy).AsReadOnly();
+        }
     }
 }

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce", "eCommerce\eCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.WebService", "eCommerce.WebService\eCommerce.WebService.csproj", "{685E3FE1-F960-41B7-8348-B4800AF2F001}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.PassThroughEventBus", "eCommerce.PassThroughEventBus\eCommerce.PassThroughEventBus.csproj", "{263B2DFC-1EF4-4139-B418-E711C45E0B5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.PassThroughEventBus.Test", "eCommerce.PassThroughEventBus.Test\eCommerce.PassThroughEventBus.Test.csproj", "{E71D5115-7FEA-4785-B37A-484A05F3F03A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{685E3FE1-F960-41B7-8348-B4800AF2F001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{685E3FE1-F960-41B7-8348-B4800AF2F001}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{685E3FE1-F960-41B7-8348-B4800AF2F001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263B2DFC-1EF4-4139-B418-E711C45E0B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263B2DFC-1EF4-4139-B418-E711C45E0B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263B2DFC-1EF4-4139-B418-E711C45E0B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263B2DFC-1EF4-4139-B418-E711C45E0B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E71D5115-7FEA-4785-B37A-484A05F3F03A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71D5115-7FEA-4785-B37A-484A05F3F03A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71D5115-7FEA-4785-B37A-484A05F3F03A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71D5115-7FEA-4785-B37A-484A05F3F03A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.PassThroughEventB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.PassThroughEventBus.Test", "eCommerce.PassThroughEventBus.Test\eCommerce.PassThroughEventBus.Test.csproj", "{E71D5115-7FEA-4785-B37A-484A05F3F03A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowForm", "WindowForm\WindowForm.csproj", "{2ABE423A-2214-40FB-B405-A3A4FA246A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{A6B3D57E-5E5A-4D50-8734-5EE8FF4BA375}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{E71D5115-7FEA-4785-B37A-484A05F3F03A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E71D5115-7FEA-4785-B37A-484A05F3F03A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E71D5115-7FEA-4785-B37A-484A05F3F03A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ABE423A-2214-40FB-B405-A3A4FA246A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ABE423A-2214-40FB-B405-A3A4FA246A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ABE423A-2214-40FB-B405-A3A4FA246A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ABE423A-2214-40FB-B405-A3A4FA246A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6B3D57E-5E5A-4D50-8734-5EE8FF4BA375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B3D57E-5E5A-4D50-8734-5EE8FF4BA375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B3D57E-5E5A-4D50-8734-5EE8FF4BA375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B3D57E-5E5A-4D50-8734-5EE8FF4BA375}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

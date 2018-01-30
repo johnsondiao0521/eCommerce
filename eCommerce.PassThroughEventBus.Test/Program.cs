@@ -7,7 +7,7 @@ using Autofac;
 
 namespace eCommerce.PassThroughEventBus.Test
 {
-    class Program
+    public class Program
     {
         public Program()
         {
@@ -18,7 +18,7 @@ namespace eCommerce.PassThroughEventBus.Test
             try
             {
                 var builder = new ContainerBuilder();
-                //builder.RegisterType<IEventHandler<CustomerCreatedEvent>>().As<CustomerCreatedEventHandler>();
+                builder.RegisterType<CustomerCreatedEventHandler>().As<IEventHandler>();
                 builder.RegisterType<PassThroughEventBus>().As<IEventBus>();
                 using (var container = builder.Build())
                 {
@@ -32,5 +32,6 @@ namespace eCommerce.PassThroughEventBus.Test
 
             Console.ReadKey();
         }
+
     }
 }

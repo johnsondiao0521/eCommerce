@@ -15,17 +15,17 @@ namespace eCommerce.WebService
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            MappingConfig.RegisterMapping();
+            Extensions.MappingConfig.RegisterMapping();
 
             container = new WindsorContainer();
-            BootstrapConfig.Register(this.container);
+            Extensions.Extensions.Register(container);
         }
 
         protected void Application_Stop()
         {
-            if (this.container != null)
+            if (container != null)
             {
-                this.container.Dispose();
+                container.Dispose();
             }
         }
     }

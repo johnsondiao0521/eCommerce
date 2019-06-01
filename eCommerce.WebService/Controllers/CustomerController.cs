@@ -4,18 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using eCommerce.ApplicationLayer.Customers;
+using eCommerce.Application.Customers;
 using eCommerce.WebService.Models;
 
 namespace eCommerce.WebService.Controllers
 {
-    /*
-      http://localhost:63223/api/customer/add?FirstName=john2&LastName=smith2&Email=john2.smith2@microsoft.com&countryid=229074bd-2356-4b5a-8619-cdebba71cc21
-       http://localhost:63223/api/customer/Getbyid/5D5020DA-47DF-4C82-A722-C8DEAF06AE23
-      http://localhost:63223/api/customer/IsEmailAvailable?email=smith.john@microsoft.com
-      http://localhost:63223/api/customer/RemoveById/5D5020DA-47DF-4C82-A722-C8DEAF06AE23
-      http://localhost:63223/api/customer/update?id=5D5020DA-47DF-4C82-A722-C8DEAF06AE23&Email=smith.john@microsoft.com
-         */
     public class CustomerController : ApiController
     {
         readonly ICustomerService customerService;
@@ -24,13 +17,18 @@ namespace eCommerce.WebService.Controllers
             this.customerService = customerService;
         }
 
+        /// <summary>
+        /// http://localhost:58209/api/customer/add?FirstName=john2&LastName=smith2&Email=john2.smith2@microsoft.com&countryid=229074bd-2356-4b5a-8619-cdebba71cc21
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
         [HttpGet]
         public Response<CustomerDto> Add([FromUri]CustomerDto customer)
         {
             Response<CustomerDto> response = new Response<CustomerDto>();
             try
             {
-                response.Object = this.customerService.Add(customer);
+                response.Data = this.customerService.Add(customer);
             }
             catch (Exception ex)
             {
@@ -40,13 +38,18 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
+        /// <summary>
+        /// http://localhost:58209/api/customer/IsEmailAvailable?email=smith.john@microsoft.com
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         [HttpGet]
         public Response<bool> IsEmailAvailable(string email)
         {
             Response<bool> response = new Response<bool>();
             try
             {
-                response.Object = this.customerService.IsEmailAvailable(email);
+                response.Data = this.customerService.IsEmailAvailable(email);
             }
             catch (Exception ex)
             {
@@ -56,13 +59,18 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
+        /// <summary>
+        /// http://localhost:58209/api/customer/Getbyid/5D5020DA-47DF-4C82-A722-C8DEAF06AE23
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public Response<CustomerDto> GetById(Guid id)
         {
             Response<CustomerDto> response = new Response<CustomerDto>();
             try
             {
-                response.Object = this.customerService.Get(id);
+                response.Data = this.customerService.Get(id);
             }
             catch (Exception ex)
             {
@@ -73,6 +81,11 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
+        /// <summary>
+        /// http://localhost:58209/api/customer/RemoveById/5D5020DA-47DF-4C82-A722-C8DEAF06AE23
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public Response RemoveById(Guid id)
         {
@@ -90,6 +103,11 @@ namespace eCommerce.WebService.Controllers
             return response;
         }
 
+        /// <summary>
+        /// http://localhost:58209/api/customer/update?id=5D5020DA-47DF-4C82-A722-C8DEAF06AE23&Email=smith.john@microsoft.com
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
         [HttpGet]
         public Response Update([FromUri]CustomerDto customer)
         {

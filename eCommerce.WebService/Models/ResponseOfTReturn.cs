@@ -1,8 +1,12 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
 namespace eCommerce.WebService.Models
 {
-    public class Response<TReturn> : Response
+    public class Response<T> : Response
     {
-        public TReturn Object { get; set; }
+        public T Data { get; set; }
     }
 }
